@@ -9,7 +9,7 @@ foreach (var record in records)
 {
     var filteredProjects = record.projects
         .Split(", ")
-        .Where(p => !p.Contains("\\test", StringComparison.OrdinalIgnoreCase))
+        .Where(p => !p.Contains("Test"))
         .ToArray();
 
     if (!filteredProjects.Any()) continue;
